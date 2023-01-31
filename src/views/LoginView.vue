@@ -21,7 +21,7 @@
             },
             tempGo() {
                 this.$store.state.nickname = prompt("임시로 사용할 닉네임");
-                this.$router.push("/roomList");
+                this.$router.push("/home");
             }
         }
     }

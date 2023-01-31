@@ -12,7 +12,7 @@
             <img class="menu" src="@/assets/Profile_footer.svg">
             <div style="color: white">내프로필</div>
         </div>
-        <div class="menu_box">
+        <div class="menu_box" @click="this.$router.push('/shop')">
             <img class="menu" src="@/assets/Shop.svg">
             <div style="color: white">상점</div>
         </div>
