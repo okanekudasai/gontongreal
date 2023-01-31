@@ -8,15 +8,15 @@
             <img class="menu" src="@/assets/Search.svg">
             <div style="color: white">방검색</div>
         </div>
-        <div class="menu_box">
-            <img class="menu" src="@/assets/Profile.svg">
+        <div class="menu_box" @click="this.$router.push('/profile')">
+            <img class="menu" src="@/assets/Profile_footer.svg">
             <div style="color: white">내프로필</div>
         </div>
         <div class="menu_box">
             <img class="menu" src="@/assets/Shop.svg">
             <div style="color: white">상점</div>
         </div>
-        <div class="menu_box">
+        <div class="menu_box" @click="this.$router.push('/rank')">
             <img class="menu" src="@/assets/Rank.svg">
             <div style="color: white">랭킹</div>
         </div>

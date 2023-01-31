@@ -9,7 +9,7 @@
 import FooterVue from "@/components/FooterVue.vue"
 export default {
     components: {
-        FooterVue
+      FooterVue
     },
 }
 </script>

@@ -12,16 +12,7 @@
 
         </div>
     </div> -->
-    <div id="header">
-        <img src="@/assets/main_logo2.png" style="height: 50px; position: absolute; left: 20px;">
-        <div style="font-size: 30px;">저잣거리</div>
-        <div>
-            <div v-for="(t, idx) in test" :key="idx">
-                {{ t }}
-            </div>
-        </div>
-        {{ tt }}
-    </div>
+    <HeaderVue></HeaderVue>
     <div style="height: 75%">
         <!-- <div style="text-align: center">저잣거리</div> -->
         <room-card v-for="(room, idx) in roomList" :key="idx" v-bind:room="room"></room-card>
@@ -30,11 +21,13 @@
 </template>
 
 <script>
+import HeaderVue from "@/components/HeaderVue.vue"
 import RoomCard from "@/components/RoomCard.vue"
 // import variables from "@/assets/scss/_variable.scss"
 
 export default {
     components: {
+        HeaderVue,
         RoomCard
     },
     data() {
@@ -77,25 +70,15 @@ export default {
         async makeRoom() {
             alert("눌렸어요")
         },
+        fff() {
+            alert('fffff');
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/_variable.scss";
-
-    :root {
-        --my-color: blue;
-    }
-    #header {
-        position: absolute;
-        top: 0;
-        height: 60px;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
     #plus_button {
         position: absolute;
         background-color: #181816;
@@ -111,6 +94,9 @@ export default {
         font-weight: bold;
         font-size: 30px;
     }
+
+
+    // 모달용 css
     #modal_container {
         z-index: 99;
         position: absolute;

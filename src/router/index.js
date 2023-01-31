@@ -1,4 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import ProfileView from '@/views/ProfileView.vue'
+// import ShopView from '@/views/ShopView.vue'
+import RankView from '@/views/RankView.vue'
+// import RegisterView from '@/views/accounts/RegisterView.vue'
 
 const routes = [
   {
@@ -20,7 +24,17 @@ const routes = [
     path: "/home",
     name: "home",
     component: () => import("@/views/HomeView.vue")
-}
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: ProfileView
+  },
+  {
+    path: '/rank/',
+    name: 'Rank',
+    component: RankView
+  },
 ]
 
 const router = createRouter({
